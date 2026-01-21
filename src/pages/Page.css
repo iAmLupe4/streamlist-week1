@@ -1,0 +1,74 @@
+.page { padding-top: 12px; } 
+
+.pageTitle { 
+  margin: 6px 0 6px; 
+  font-size: 36px; 
+} 
+
+.pageSubtitle { 
+  margin: 0 0 18px; 
+  color: var(--muted); 
+} 
+
+.card { 
+  background: var(--panel); 
+  border: 1px solid var(--stroke); 
+  border-radius: 18px; 
+  padding: 16px; 
+} 
+
+.formRow { 
+  display: grid; 
+  grid-template-columns: 1fr auto; 
+  gap: 14px; 
+  align-items: end; 
+} 
+
+.label { display: grid; gap: 8px; color: var(--muted); } 
+
+.input { 
+  width: 100%; 
+  padding: 12px 12px; 
+  border-radius: 14px; 
+  border: 1px solid var(--stroke); 
+  background: rgba(0,0,0,0.25); 
+  color: var(--text); 
+  outline: none; 
+} 
+
+.input:focus { 
+  border-color: rgba(124, 92, 255, 0.75); 
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.18); 
+} 
+
+.btn { 
+  padding: 12px 16px; 
+  border-radius: 14px; 
+  border: 1px solid rgba(124, 92, 255, 0.55); 
+  background: rgba(124, 92, 255, 0.22); 
+  color: var(--text); 
+  cursor: pointer; 
+  font-weight: 700; 
+} 
+
+.btn:hover { 
+  background: rgba(124, 92, 255, 0.30); 
+} 
+
+.hint { 
+  margin-top: 14px; 
+  color: var(--muted); 
+  font-size: 14px; 
+} 
+
+.page,
+.pageTitle,
+.pageSubtitle,
+.card,
+label,
+p,
+h1,
+h2,
+h3 {
+    color: white;
+}
