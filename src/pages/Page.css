@@ -72,3 +72,73 @@ h2,
 h3 {
     color: white;
 }
+
+.sectionTitle { 
+  margin: 0 0 10px 0; 
+  font-size: 18px; 
+} 
+
+.emptyText { 
+  opacity: 0.8; 
+  margin: 0; 
+} 
+
+.list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: grid; 
+  gap: 10px; 
+} 
+
+.listItem { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 12px; 
+  padding: 12px; 
+  border-radius: 12px; 
+  background: rgba(255, 255, 255, 0.06); 
+} 
+
+.listItem.done .itemText { 
+  text-decoration: line-through; 
+  opacity: 0.7; 
+} 
+
+.itemText { 
+  font-size: 16px; 
+} 
+
+.actions { 
+  display: flex; 
+  gap: 6px; 
+} 
+
+.iconBtn { 
+  border: none; 
+  background: rgba(255, 255, 255, 0.08); 
+  border-radius: 10px; 
+  padding: 8px 10px; 
+  cursor: pointer; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+
+.iconBtn:hover { 
+  background: rgba(255, 255, 255, 0.14); 
+} 
+
+.iconBtn.danger:hover { 
+  background: rgba(255, 0, 0, 0.2); 
+} 
+
+.editInput { 
+  width: 100%; 
+  padding: 8px 10px; 
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25); 
+  color: inherit; 
+} 
