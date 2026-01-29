@@ -4,6 +4,7 @@ import StreamList from "./pages/StreamList";
 import Movies from "./pages/Movies"; 
 import Cart from "./pages/Cart"; 
 import About from "./pages/About"; 
+import Subscriptions from "./pages/Subscriptions";
 
 function App() { 
   return ( 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/movies" element={<Movies />} /> 
           <Route path="/cart" element={<Cart />} /> 
           <Route path="/about" element={<About />} /> 
+          <Route path="/subscriptions" element={<Subscriptions />} />
         </Routes> 
       </main> 
     </Router> 

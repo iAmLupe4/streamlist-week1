@@ -1,9 +1,12 @@
-import React from "react"; 
+import React, { useContext } from "react"; 
 import { NavLink } from "react-router-dom"; 
-import { FaList, FaFilm, FaShoppingCart, FaInfoCircle } from "react-icons/fa"; 
+import { FaListCheck, FaFilm, FaCartShopping, FaCircleInfo } from "react-icons/fa6"; 
+import CartContext from "../context/CartContext"; 
 import "./Navbar.css"; 
 
 export default function Navbar() { 
+  const { cartCount } = useContext(CartContext); 
+
   return ( 
     <header className="navHeader"> 
       <div className="brand"> 
@@ -16,18 +19,26 @@ export default function Navbar() {
 
       <nav className="navLinks"> 
         <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}> 
-          <FaList /> StreamList 
+          <FaListCheck /> StreamList 
         </NavLink> 
+
         <NavLink to="/movies" className={({ isActive }) => (isActive ? "active" : "")}> 
           <FaFilm /> Movies 
         </NavLink> 
+
         <NavLink to="/cart" className={({ isActive }) => (isActive ? "active" : "")}> 
-          <FaShoppingCart /> Cart 
+          <FaCartShopping /> Cart ({cartCount}) 
         </NavLink> 
+
         <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}> 
-          <FaInfoCircle /> About 
+          <FaCircleInfo /> About 
         </NavLink> 
-      </nav> 
+
+        <NavLink to="/subscriptions" className={({ isActive }) => (isActive ? "active" : "")}>
+        Subscriptions
+      </NavLink> 
+      </nav>
     </header> 
+    
   ); 
 } 
