@@ -1,9 +1,25 @@
-import React, { useState } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import { FaCheckCircle, FaEdit, FaTrash, FaSave } from "react-icons/fa";
 
+const STORAGE_KEY = "streamlist_item";
+
 export default function StreamList() { 
+
   const [title, setTitle] = useState(""); 
-  const [items, setItems] = useState([]); 
+
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  }, [items]);
+
+  // handleAdd
+  // handleDelete
+  // handleToggleComplete
+  // handleEdit / handleSave
 
   // Add item 
   const handleAdd = (e) => { 
@@ -61,8 +77,7 @@ export default function StreamList() {
           ? { ...item, text: item.text.trim(), isEditing: false } 
           : item 
       ) 
-    ); 
-  }; 
+    )}; 
  
   return ( 
     <div className="page"> 
@@ -159,4 +174,4 @@ export default function StreamList() {
       </div> 
     </div> 
   ); 
-} 
+}
