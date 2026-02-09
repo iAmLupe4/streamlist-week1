@@ -17,7 +17,7 @@ export default function Subscriptions() {
       {warning && <div className="error">{warning}</div>} 
 
       <div className="grid"> 
-        {list.map((item) => ( 
+        {Array.isArray(list) && list.map((item) => ( 
           <div className="card" key={item.id}> 
             <div className="cardTop"> 
               <img className="thumb" src={item.img} alt={item.service} /> 
