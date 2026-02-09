@@ -1,4 +1,4 @@
- import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Navbar from "./components/Navbar"; 
 import StreamList from "./pages/StreamList"; 
 import Movies from "./pages/Movies"; 
@@ -15,8 +15,8 @@ function App() {
           <Route path="/" element={<StreamList />} /> 
           <Route path="/movies" element={<Movies />} /> 
           <Route path="/cart" element={<Cart />} /> 
-          <Route path="/about" element={<About />} /> 
           <Route path="/subscriptions" element={<Subscriptions />} />
+          <Route path="/about" element={<About />} /> 
         </Routes> 
       </main> 
     </Router> 

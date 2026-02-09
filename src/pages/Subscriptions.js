@@ -1,3 +1,7 @@
+// Week 4 AI Testing Update:Code reviewed using CodeGPT to validate subscription logic, component structure, and state handling.
+
+console.log("Week 4 Test: Subscriptions component loaded successfully");
+
 import React, { useContext } from "react"; 
 import CartContext from "../context/CartContext"; 
 import list from "../data/Data"; 
@@ -11,7 +15,7 @@ export default function Subscriptions() {
       <h1 className="pageTitle">Subscriptions</h1> 
       
       <p className="pageSubtitle"> 
-        Choose one subscription. Accessories can be added multiple times. 
+        Select one subscription plan. Accessories can be added multiple times. 
       </p> 
 
       {warning && <div className="error">{warning}</div>} 

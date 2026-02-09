@@ -30,13 +30,13 @@ export default function Navbar() {
           <FaCartShopping /> Cart ({cartCount}) 
         </NavLink> 
 
-        <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}> 
-          <FaCircleInfo /> About 
-        </NavLink> 
-
         <NavLink to="/subscriptions" className={({ isActive }) => (isActive ? "active" : "")}>
         Subscriptions
-      </NavLink> 
+        </NavLink>
+
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}> 
+          <FaCircleInfo /> About 
+        </NavLink>
       </nav>
     </header> 
     
