@@ -1,11 +1,10 @@
-// Week 4 AI Testing Update:Code reviewed using CodeGPT to validate subscription logic, component structure, and state handling.
-
-console.log("Week 4 Test: Subscriptions component loaded successfully");
-
 import React, { useContext } from "react"; 
 import CartContext from "../context/CartContext"; 
 import list from "../data/Data"; 
 import "../pages/Page.css"; 
+
+//Week 4 AI Testing Update: Code reviewed using CodeGPT...
+console.log("Week 4 Test: Subscriptions component loaded successfully");
 
 export default function Subscriptions() { 
   const { addToCart, warning } = useContext(CartContext); 
